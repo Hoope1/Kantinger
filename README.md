@@ -365,6 +365,22 @@ Academic work? Please cite the corresponding papers (see table in §7).
   year         = 2025,
   url          = {https://github.com/your-org/edge_suite},
   version      = {2025.06.07}
+
+
+---
+
+## 8  Was du anpassen kannst!!!:
+
+* **Echte Modell-Implementierungen:**  
+  Ersetze in `inference._load_model_stub()` den Dummy durch das spezifische PyTorch-/MM-Seg-Netz.  
+  Die Links & Datei-Namen pflegst du zentral in `config.py`.  Wichtig: !!!https://github.com/MarkMoHR/Awesome-Edge-Detection-Papers!!!
+
+* **Extrem große Modelle:**  
+  Falls 4 GB nicht reichen, in `model_manager.ensure_weight()` optional `torch_dtype=torch.float16` oder dynamisches `torch.backends.cudnn.benchmark = True` setzen.
+
+Damit hast du alle Bestandteile, um auf *Windows 11* per Doppelklick die volle Pipeline – vom Setup bis zur interaktiven Streamlit-Suite – zu fahren und beliebige Bilder (oder ganze Ordner) durch deine zehn Edge-Netze zu jagen.  
+Viel Erfolg & happy hacking!
+
 }
 
 Happy edge hunting!

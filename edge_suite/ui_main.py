@@ -1,18 +1,22 @@
-import streamlit as st
-from pathlib import Path
-from .config import BASE_DIR
+"""Streamlit-Einstiegs-Script."""
 
-# Streamlit findet alle Dateien in edge_suite/pages automatisch
-st.set_page_config(page_title="Edge Suite", page_icon="🌊", layout="wide")
+import streamlit as st
+
+st.set_page_config(
+    page_title="Edge Suite",
+    page_icon="🌊",
+    layout="wide",
+)
 
 st.sidebar.title("🖼️ Edge-Detection Suite")
 st.sidebar.markdown(
     """
-    **1 Bilder anwenden** – einzelne Bilder oder Ordner verarbeiten  
-    **2 Modelle verwalten** – Weights downloaden / hochladen  
-    **3 Auswahl & Start** – Modelle wählen und Batch starten
-    """
+**1 Bilder anwenden** – einzelnes Bild / Ordner verarbeiten  
+**2 Modelle verwalten** – Gewichte downloaden / hochladen  
+**3 Auswahl & Start** – Modelle wählen und Batch starten
+"""
 )
-st.sidebar.divider()
-st.sidebar.caption("Backend-Pfad: `%s`" % BASE_DIR)
-st.switch_page("edge_suite/pages/1_📂_Bilder_anwenden.py")  # Standard-Seite
+
+# Standard-Seite öffnen
+# Der Name entspricht exakt dem Dateinamen der Page (ohne Pfad).
+st.switch_page("1_📂_Bilder_anwenden.py")

@@ -1,0 +1,10 @@
+# Minimale, aber vollständige Abhängigkeiten
+streamlit>=1.37
+torch>=2.3          ; CUDA 12.x kompatibel
+torchvision>=0.18   ; dataloader utils
+opencv-python>=4.11
+numpy>=1.26
+tqdm>=4.66
+requests>=2.32
+pydantic>=2.7
+gdown>=5.1          # Google-Drive-Downloads

@@ -1,10 +1,29 @@
-# Minimale, aber vollständige Abhängigkeiten
+# ─────────────────────────────── Core ───────────────────────────────
 streamlit>=1.37
-torch>=2.3          ; CUDA 12.x kompatibel
-torchvision>=0.18   ; dataloader utils
+torch>=2.3
+torchvision>=0.18
 opencv-python>=4.11
 numpy>=1.26
 tqdm>=4.66
 requests>=2.32
 pydantic>=2.7
-gdown>=5.1          # Google-Drive-Downloads
+gdown>=5.1
+
+# ─────────────────────────── Heavy helpers ──────────────────────────
+einops>=0.7          # Transformer / UAED / EdgeNAT
+transformers>=4.41   # DiffusionEdge
+xformers>=0.0.26     # DiffusionEdge, memory-efficient attention
+mmcv-full>=2.1       # EDTER (MMCV ≥ 2.0 für PyTorch 2.3 + CUDA 12)
+mmsegmentation>=1.4  # EDTER decoder utils
+
+# ──────────────────────────── Model repos ───────────────────────────
+git+https://github.com/xavysp/TEED.git#egg=teed
+git+https://github.com/hellozhuo/pidinet.git#egg=pidinet
+git+https://github.com/jannctu/FINED.git#egg=fined
+git+https://github.com/xavysp/DexiNed.git#egg=dexined
+git+https://github.com/WHUHLX/CATS.git#egg=cats
+git+https://github.com/jhjie/EdgeNAT.git#egg=edgenat
+git+https://github.com/GuHuangAI/DiffusionEdge.git#egg=diffusionedge
+git+https://github.com/ZhouCX117/UAED_MuGE.git#egg=uaed
+git+https://github.com/pkuCactus/BDCN.git#egg=bdcn
+git+https://github.com/MengyangPu/EDTER.git#egg=edter
